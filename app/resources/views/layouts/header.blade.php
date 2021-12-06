@@ -1,8 +1,16 @@
 <nav id="header" class="navbar navbar-expand-md navbar-dark shadow-sm d-flex">
     <div class="d-flex justify-content-between w-100">
-        <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'Laravel') }}
-        </a>
+        <div class="col-3">
+            <span class="menu" data-feather="menu"></span>
+            <a class="navbar-brand" href="{{ url('/') }}">
+                <span data-feather="youtube"></span>
+                {{ config('app.name', 'Laravel') }}
+            </a>
+        </div>
+
+        <div class="col-md-5">
+            <input class="search" placeholder="検索">
+        </div>
 
         <div class="navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">

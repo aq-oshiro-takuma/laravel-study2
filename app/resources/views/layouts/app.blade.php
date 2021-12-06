@@ -18,6 +18,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
 <div id="app">
@@ -39,4 +42,8 @@
     </main>
 </div>
 </body>
+
+<script>
+    feather.replace()
+</script>
 </html>

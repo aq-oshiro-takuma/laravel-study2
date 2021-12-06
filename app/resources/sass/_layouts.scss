@@ -1,0 +1,121 @@
+@import "variables";
+
+#header {
+    background-color: #FFFFFF;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 10;
+
+    a {
+        padding: 0;
+        color: #0b2e13;
+    }
+}
+
+.menu {
+    margin-right: 20px;
+}
+
+.search {
+    width: 100%;
+    height: 30px;
+}
+
+.auth-link {
+    span {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+.login-container {
+    width: 300px;
+}
+
+.container-fluid > .row {
+    min-height: calc(100vh - 120px);
+}
+
+.sidebar {
+    background-color: #F2EDF6;
+
+    .nav-link {
+        display: block;
+        padding: .5rem 1rem;
+        font-size: 14px;
+        font-weight: 500;
+        color: #007bff;
+
+        &.active {
+            color: #333;
+        }
+
+        .feather {
+            margin-right: 4px;
+        }
+    }
+
+    .nav-link:hover {
+        background-color: #E8E0EF;
+    }
+}
+
+.sidebar .nav-link.active .feather, .sidebar .nav-link:hover .feather {
+    color: inherit;
+}
+
+main {
+    min-height: calc(100vh - 120px);
+    font-size: 1rem;
+}
+
+.body-wrapper {
+    margin-top: 60px;
+}
+
+.nav > li {
+    position: relative;
+    display: block;
+
+    a {
+        position: relative;
+        display: block;
+        padding: 10px 15px;
+    }
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+    text-decoration: none;
+    background-color: #eee;
+}
+
+.nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+}
+
+.nav-tabs > li > a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+}
+
+.nav-tabs > li > a:hover {
+    border-color: #eee #eee #ddd;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    color: #555;
+    cursor: default;
+    background-color: #f8fafc;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+
+tbody .priority-high {
+    background-color: #F9E6E9 !important;
+}
