@@ -2111,6 +2111,35 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "HomeIndex"
 });
@@ -2121,8 +2150,11 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_vue_routes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/vue_routes */ "./resources/js/components/vue_routes.js");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -2141,7 +2173,15 @@ window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('home-index', (__webpack_require__(/*! ./components/home/Index.vue */ "./resources/js/components/home/Index.vue")["default"]));
+
+
+for (var i in _components_vue_routes__WEBPACK_IMPORTED_MODULE_0__["default"]) {
+  var tag = _components_vue_routes__WEBPACK_IMPORTED_MODULE_0__["default"][i].tag;
+  var dir = _components_vue_routes__WEBPACK_IMPORTED_MODULE_0__["default"][i].dir;
+  var file = _components_vue_routes__WEBPACK_IMPORTED_MODULE_0__["default"][i].file;
+  Vue.component(tag, __webpack_require__("./resources/js sync recursive ^.*$")("" + dir + file)["default"]);
+}
+
 Vue.component('example-component', (__webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -2196,6 +2236,25 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/vue_routes.js":
+/*!***********************************************!*\
+  !*** ./resources/js/components/vue_routes.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ([{
+  tag: 'home-index',
+  dir: './components/home/',
+  file: 'Index.vue'
+}]);
 
 /***/ }),
 
@@ -6582,7 +6641,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.movie[data-v-19eedf0d] {\n    width: 300px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n@media screen and ( max-width: 490px ){\n.movie[data-v-19eedf0d] {\n        width: 90%;\n}\n}\n@media screen and ( min-width: 491px ) and ( max-width: 800px) {\n.movie[data-v-19eedf0d] {\n        width: 45%;\n}\n}\n@media screen and ( min-width: 801px ) and (max-width: 1060px) {\n.movie[data-v-19eedf0d] {\n        width: 30%;\n}\n}\n@media screen and ( min-width: 1061px ) {\n.movie[data-v-19eedf0d] {\n        width: 22.5%;\n}\n}\n.movie[data-v-19eedf0d] {\n    max-width: 320px;\n    margin: 5px;\n}\nimg[data-v-19eedf0d] {\n    width: 100%;\n}\np[data-v-19eedf0d] {\n    width: 100%;\n    margin: 0;\n}\n.recommendation-items[data-v-19eedf0d] {\n    /*max-height: 440px;*/\n    /*overflow: hidden;*/\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -38148,8 +38207,52 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "d-flex flex-row" }, [
-          _c("img", { staticClass: "movie", attrs: { src: "/img/damy.png" } }),
+        _c("div", [
+          _c(
+            "div",
+            { staticClass: "d-flex flex-row flex-wrap recommendation-items" },
+            [
+              _c("div", { staticClass: "movie flex-column" }, [
+                _c("img", { attrs: { src: "/img/damy.png" } }),
+                _vm._v(" "),
+                _c("p", [_vm._v("タイトル")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "small" }, [_vm._v("投稿者")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "small" }, [_vm._v("再生回数 投稿日")]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "movie flex-column" }, [
+                _c("img", { attrs: { src: "/img/damy.png" } }),
+                _vm._v(" "),
+                _c("p", [_vm._v("タイトル")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "small" }, [_vm._v("投稿者")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "small" }, [_vm._v("再生回数 投稿日")]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "movie flex-column" }, [
+                _c("img", { attrs: { src: "/img/damy.png" } }),
+                _vm._v(" "),
+                _c("p", [_vm._v("タイトル")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "small" }, [_vm._v("投稿者")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "small" }, [_vm._v("再生回数 投稿日")]),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "movie flex-column" }, [
+                _c("img", { attrs: { src: "/img/damy.png" } }),
+                _vm._v(" "),
+                _c("p", [_vm._v("タイトル")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "small" }, [_vm._v("投稿者")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "small" }, [_vm._v("再生回数 投稿日")]),
+              ]),
+            ]
+          ),
         ]),
       ]),
     ])
@@ -50315,6 +50418,47 @@ Vue.compile = compileToFunctions;
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Vue);
 
+
+/***/ }),
+
+/***/ "./resources/js sync recursive ^.*$":
+/*!*********************************!*\
+  !*** ./resources/js/ sync ^.*$ ***!
+  \*********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var map = {
+	"./app": "./resources/js/app.js",
+	"./app.js": "./resources/js/app.js",
+	"./bootstrap": "./resources/js/bootstrap.js",
+	"./bootstrap.js": "./resources/js/bootstrap.js",
+	"./components/ExampleComponent": "./resources/js/components/ExampleComponent.vue",
+	"./components/ExampleComponent.vue": "./resources/js/components/ExampleComponent.vue",
+	"./components/home/Index": "./resources/js/components/home/Index.vue",
+	"./components/home/Index.vue": "./resources/js/components/home/Index.vue",
+	"./components/vue_routes": "./resources/js/components/vue_routes.js",
+	"./components/vue_routes.js": "./resources/js/components/vue_routes.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./resources/js sync recursive ^.*$";
 
 /***/ }),
 

@@ -19,7 +19,15 @@ window.Vue = require('vue').default;
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('home-index', require('./components/home/Index.vue').default);
+import vue_routes from "./components/vue_routes";
+
+for (var i in vue_routes) {
+    var tag = vue_routes[i].tag;
+    var dir = vue_routes[i].dir;
+    var file = vue_routes[i].file;
+
+    Vue.component(tag, require('' + dir + file).default);
+}
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 

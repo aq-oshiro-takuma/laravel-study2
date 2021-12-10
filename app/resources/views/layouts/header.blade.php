@@ -8,8 +8,9 @@
             </a>
         </div>
 
-        <div class="col-md-5">
+        <div class="col-md-5 d-inline-flex">
             <input class="search" placeholder="検索">
+            <a href="#"><span data-feather="search"></span></a>
         </div>
 
         <div class="navbar-collapse" id="navbarSupportedContent">
